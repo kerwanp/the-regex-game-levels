@@ -1,0 +1,50 @@
+{
+  "$schema": "./schema.json",
+  "id": "ulid",
+  "name": "ULID",
+  "description": "The ULID, which stands for Universally unique Lexicographically sortable IDentifier, is an alternative to the UUID.",
+  "category": "IDs",
+  "difficulty": 3,
+  "tests": {
+    "shouldMatch": [
+      {
+        "value": "01HRJ8WJKN68TNXQ2FVNMAR4YR",
+        "match": []
+      },
+      {
+        "value": "01HRJDMZS27EWANFCAB3M1D2E3",
+        "match": []
+      },
+      {
+        "value": "25hrjdq1k2rp820egp1n7v5eg1",
+        "match": []
+      }
+    ],
+    "shouldNotMatch": [
+      {
+        "value": "bd7611d7-7b0e-4d62-be23-aef8f2e16b224"
+      },
+      {
+        "value": "81HRJDSFY233YBJSGJQM078JHD"
+      },
+      {
+        "value": "29HRJDTQ85VWSS5AN1BWFD0RB3"
+      },
+      {
+        "value": "29HRJDTL85VWSS5AN1BWFD0RB3"
+      },
+      {
+        "value": "01HRJDYVHDJ68NTF0T00RUZMY7"
+      },
+      {
+        "value": "29hrjdtl85owss5an1bwfd0rb3"
+      },
+      {
+        "value": "01HRJDXJB1QR8BQD5QDB1083EE"
+      },
+      {
+        "value": "01HRJDXX7TX77FXZ7WTY75XP0D5X"
+      }
+    ]
+  }
+}

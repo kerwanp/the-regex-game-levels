@@ -1,0 +1,42 @@
+{
+  "$schema": "./schema.json",
+  "id": "email-easy",
+  "name": "Email - Easy",
+  "description": "Electronic mail (email or e-mail) is a method of transmitting and receiving messages using electronic devices. (no really???)",
+  "difficulty": 2,
+  "category": "Web",
+  "tests": {
+    "shouldMatch": [
+      {
+        "value": "example@gmail.com",
+        "match": ["example", "gmail.com"]
+      },
+      {
+        "value": "hello.world@hoo.example.org",
+        "match": ["hello.world", "hoo.example.org"]
+      },
+      {
+        "value": "noplease@the-regex-game.com",
+        "match": ["noplease", "the-regex-game.com"]
+      },
+      {
+        "value": "reply@hellthread.net",
+        "match": ["reply", "hellthread.net"]
+      }
+    ],
+    "shouldNotMatch": [
+      {
+        "value": "twiter.com/PaucotMartin"
+      },
+      {
+        "value": "iamanemail"
+      },
+      {
+        "value": "please@valid.meeeeeee"
+      },
+      {
+        "value": "idonthave@tld"
+      }
+    ]
+  }
+}
