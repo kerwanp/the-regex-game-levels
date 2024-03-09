@@ -3,6 +3,7 @@
   "id": "ulid",
   "name": "ULID",
   "description": "The ULID, which stands for Universally unique Lexicographically sortable IDentifier, is an alternative to the UUID.",
+  "difficulty": 2,
   "category": "IDs",
   "tests": {
     "shouldMatch": [
