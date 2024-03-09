@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://the-regex-game.com/level.schema.json",
+  "title": "Level",
+  "description": "A level for The Regex Game",
+  "type": "object",
+  "properties": {
+    "name": {
+      "description": "The name of the level",
+      "type": "string"
+    },
+    "category": {
+      "description": "The category of the level",
+      "type": "string"
+    },
+    "difficulty": {
+      "description": "The difficulty of the level from 1 to 5 (used to calculate scores)",
+      "type": "integer"
+    },
+    "description": {
+      "description": "The description of the level",
+      "type": "string"
+    },
+    "tests": {
+      "description": "The tests of the level",
+      "type": "object",
+      "properties": {
+        "shouldMatch": {
+          "description": "The tests that should match the Regex",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "The value that should match the Regex",
+                "type": "string"
+              },
+              "match": {
+                "description": "The captured values that should match the Regex",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": ["value", "match"]
+          }
+        },
+        "shouldNotMatch": {
+          "description": "The tests that should not match the Regex",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "value": {
+                "description": "The value that should not match the Regex",
+                "type": "string"
+              }
+            },
+            "required": ["value"]
+          }
+        }
+      }
+    }
+  },
+  "required": ["name", "difficulty", "description", "tests"]
+}
