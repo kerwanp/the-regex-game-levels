@@ -1,0 +1,61 @@
+{
+  "$schema": "./schema.json",
+  "name": "Float",
+  "difficulty": 3,
+  "category": "Data",
+  "description": "Write a Regex that can match negative and positive float numbers.",
+  "tests": {
+    "shouldMatch": [
+      {
+        "value": "1.5",
+        "match": []
+      },
+      {
+        "value": "187.54548",
+        "match": []
+      },
+      {
+        "value": "187.54548",
+        "match": []
+      },
+      {
+        "value": ".420",
+        "match": []
+      },
+      {
+        "value": "30035.",
+        "match": []
+      },
+      {
+        "value": "-69.45",
+        "match": []
+      }
+    ],
+    "shouldNotMatch": [
+      {
+        "value": "554"
+      },
+      {
+        "value": "-0548"
+      },
+      {
+        "value": "ab21"
+      },
+      {
+        "value": "54..8"
+      },
+      {
+        "value": "80.54.48"
+      },
+      {
+        "value": "048-7004"
+      },
+      {
+        "value": "0487004-"
+      },
+      {
+        "value": "--0487004."
+      }
+    ]
+  }
+}
