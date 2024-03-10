@@ -1,7 +1,7 @@
 {
   "$schema": "./schema.json",
   "id": "email-easy",
-  "name": "Email - Easy",
+  "name": "Email",
   "description": "Electronic mail (email or e-mail) is a method of transmitting and receiving messages using electronic devices. (no really???)",
   "difficulty": 2,
   "category": "Web",
