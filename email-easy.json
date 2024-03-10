@@ -2,8 +2,8 @@
   "$schema": "./schema.json",
   "id": "email-easy",
   "name": "Email",
-  "description": "Electronic mail (email or e-mail) is a method of transmitting and receiving messages using electronic devices. (no really???)",
-  "difficulty": 2,
+  "description": "Write a Regex that matches an email address",
+  "difficulty": 1,
   "category": "Web",
   "tests": {
     "shouldMatch": [
@@ -12,16 +12,16 @@
         "match": ["example", "gmail.com"]
       },
       {
-        "value": "hello.world@hoo.example.org",
-        "match": ["hello.world", "hoo.example.org"]
+        "value": "hello.world@hoo.example2.org",
+        "match": ["hello.world", "hoo.example2.org"]
       },
       {
-        "value": "noplease@the-regex-game.com",
-        "match": ["noplease", "the-regex-game.com"]
+        "value": "no-please@the-regex-game.com",
+        "match": ["no-please", "the-regex-game.com"]
       },
       {
-        "value": "reply@hellthread.net",
-        "match": ["reply", "hellthread.net"]
+        "value": "reply12@hellthread.net",
+        "match": ["reply12", "hellthread.net"]
       }
     ],
     "shouldNotMatch": [
@@ -32,10 +32,19 @@
         "value": "iamanemail"
       },
       {
-        "value": "please@valid.meeeeeee"
+        "value": "please@val_id.nop"
+      },
+      {
+        "value": "this_does@not.work"
       },
       {
         "value": "idonthave@tld"
+      },
+      {
+        "value": "@hello.world"
+      },
+      {
+        "value": "this@should@not.work"
       }
     ]
   }

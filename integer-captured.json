@@ -1,7 +1,7 @@
 {
   "$schema": "./schema.json",
   "name": "Catpured Number",
-  "difficulty": 5,
+  "difficulty": 3,
   "description": "Write a Regex that can capture a positive or negative number with leading zeros.",
   "category": "Data",
   "tests": {

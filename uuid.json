@@ -2,9 +2,9 @@
   "$schema": "./schema.json",
   "id": "uuid",
   "name": "UUID",
-  "description": "A Universally Unique Identifier (UUID) is a 128-bit label used for information in computer systems.",
+  "description": "A Universally Unique Identifier (UUID) is a 128-bit label used for information in computer systems. It is case insensitive and cannot contains characters above f.",
   "category": "IDs",
-  "difficulty": 2,
+  "difficulty": 1,
   "tests": {
     "shouldMatch": [
       {

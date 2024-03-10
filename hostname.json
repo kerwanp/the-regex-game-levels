@@ -1,0 +1,68 @@
+{
+  "$schema": "./schema.json",
+  "name": "Hostname",
+  "difficulty": 1,
+  "category": "Web",
+  "description": "Write a Regex that can match a hostname. Without scheme nor path.",
+  "tests": {
+    "shouldMatch": [
+      {
+        "value": "the-regex-game.com",
+        "match": []
+      },
+      {
+        "value": "www.x.com",
+        "match": []
+      },
+      {
+        "value": "hello-5849.com",
+        "match": []
+      },
+      {
+        "value": "this.subdomain.com",
+        "match": []
+      },
+      {
+        "value": "again1.again2.subdomain.com",
+        "match": []
+      },
+      {
+        "value": "127.0.0.1",
+        "match": []
+      },
+      {
+        "value": "10.1.0.13:3000",
+        "match": []
+      },
+      {
+        "value": "localhost",
+        "match": []
+      },
+      {
+        "value": "localhost:69",
+        "match": []
+      },
+      {
+        "value": "martin-paucot.fr:4200",
+        "match": []
+      }
+    ],
+    "shouldNotMatch": [
+      {
+        "value": "world."
+      },
+      {
+        "value": "the_regex_game.com"
+      },
+      {
+        "value": ".not-a.hostname"
+      },
+      {
+        "value": "www.x.co5"
+      },
+      {
+        "value": "example.org:nop"
+      }
+    ]
+  }
+}

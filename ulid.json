@@ -2,7 +2,7 @@
   "$schema": "./schema.json",
   "id": "ulid",
   "name": "ULID",
-  "description": "The ULID, which stands for Universally unique Lexicographically sortable IDentifier, is an alternative to the UUID.",
+  "description": "Write a Regex that matches ULIDs. You can find the specification on the official repository <a href=\"https://github.com/ulid/spec\" target=\"_blank\">https://github.com/ulid/spec</a>",
   "difficulty": 2,
   "category": "IDs",
   "tests": {
@@ -18,6 +18,10 @@
       {
         "value": "25hrjdq1k2rp820egp1n7v5eg1",
         "match": []
+      },
+      {
+        "value": "71HRM1VNE59Z0S4FH5KHATAFYW",
+        "match": []
       }
     ],
     "shouldNotMatch": [
@@ -25,25 +29,35 @@
         "value": "bd7611d7-7b0e-4d62-be23-aef8f2e16b224"
       },
       {
-        "value": "81HRJDSFY233YBJSGJQM078JHD"
+        "value": "loremipsum"
       },
       {
-        "value": "29HRJDTQ85VWSS5AN1BWFD0RB3"
+        "value": "01HRM27TZZJR64CR50KZ316AK",
+        "hint": "Should be 26 characters long"
       },
       {
-        "value": "29HRJDTL85VWSS5AN1BWFD0RB3"
+        "value": "01HRM27TZZJR64CR50KZ316AKRP",
+        "hint": "Should be 26 characters long"
       },
       {
-        "value": "01HRJDYVHDJ68NTF0T00RUZMY7"
+        "value": "81HRJDSFY233YBJSGJQM078JHD",
+        "hint": "First character must be between 0 to 7"
       },
       {
-        "value": "29hrjdtl85owss5an1bwfd0rb3"
+        "value": "29hrjdtl85oWss5an1bOfd0rb3",
+        "hint": "Should not contain the character 'O'"
       },
       {
-        "value": "01HRJDXJB1QR8BQD5QDB1083EE"
+        "value": "01HRJDXlB1QR8BQD5QLB1083EE",
+        "hint": "Should not contain the character 'L'"
       },
       {
-        "value": "01HRJDXX7TX77FXZ7WTY75XP0D5X"
+        "value": "01HRU24A6MGNP307ER49H3uD4K",
+        "hint": "Should not contain the character 'U'"
+      },
+      {
+        "value": "01HRI25NBYN2PXE7AHKF8RiJ2T",
+        "hint": "Should not contain the character 'I'"
       }
     ]
   }

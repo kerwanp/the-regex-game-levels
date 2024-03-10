@@ -1,9 +1,9 @@
 {
   "$schema": "./schema.json",
   "name": "Float",
-  "difficulty": 3,
+  "difficulty": 2,
   "category": "Data",
-  "description": "Write a Regex that can match negative and positive float numbers.",
+  "description": "Write a Regex that matches negative and positive float numbers.",
   "tests": {
     "shouldMatch": [
       {
@@ -29,6 +29,14 @@
       {
         "value": "-69.45",
         "match": []
+      },
+      {
+        "value": "-.5",
+        "match": []
+      },
+      {
+        "value": "-100.",
+        "match": []
       }
     ],
     "shouldNotMatch": [
@@ -37,6 +45,9 @@
       },
       {
         "value": "-0548"
+      },
+      {
+        "value": "-5"
       },
       {
         "value": "ab21"

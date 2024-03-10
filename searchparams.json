@@ -1,0 +1,66 @@
+{
+  "$schema": "./schema.json",
+  "name": "Search params",
+  "description": "Write a Regex that matches and capture encoded URL Search Params.",
+  "category": "Web",
+  "difficulty": 4,
+  "tests": {
+    "shouldMatch": [
+      {
+        "value": "hello=world",
+        "match": ["hello", "world"]
+      },
+      {
+        "value": "1=one",
+        "match": ["1", "one"]
+      },
+      {
+        "value": "one=1&2=two",
+        "match": ["one", "1", "2", "two"]
+      },
+      {
+        "value": "o_k=o_k&o-k=o-k&OK=OK&o.k=o.k",
+        "match": ["o_k", "o_k", "o-k", "o-k", "OK", "OK", "o.k", "o.k"]
+      },
+      {
+        "value": "json=%7B%22hello%22%3A%22world%3F%22%7D",
+        "match": ["json", "%7B%22hello%22%3A%22world%3F%22%7D"]
+      },
+      {
+        "value": "empty=",
+        "match": ["empty", ""]
+      },
+      {
+        "value": "empty1=&empty2=",
+        "match": ["empty1", "", "empty2", ""]
+      },
+      {
+        "value": "=ytpme",
+        "match": ["", "ytpme"]
+      }
+    ],
+    "shouldNotMatch": [
+      {
+        "value": "not=ok"
+      },
+      {
+        "value": "the=regex?game"
+      },
+      {
+        "value": "the=ga\"me"
+      },
+      {
+        "value": "shoud=not=match"
+      },
+      {
+        "value": "the=game&=hey"
+      },
+      {
+        "value": "alone"
+      },
+      {
+        "value": "nop=test]"
+      }
+    ]
+  }
+}

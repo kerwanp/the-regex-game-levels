@@ -1,0 +1,65 @@
+{
+  "$schema": "./schema.json",
+  "name": "AMQP URI",
+  "category": "Web",
+  "difficulty": 3,
+  "description": "Write a Regex that matches an AMQP URI and captures its parameters. You can find the specification on the official documentation <a href=\"https://www.rabbitmq.com/docs/uri-spec\" target=\"_blank\">https://www.rabbitmq.com/docs/uri-spec</a>",
+  "tests": {
+    "shouldMatch": [
+      {
+        "value": "amqp://user:password@mq.the-regex-game.com:5672/myvhost?option=1",
+        "match": [
+          "amqp",
+          "user",
+          "password",
+          "mq.the-regex-game.com",
+          "5672",
+          "myvhost",
+          "option=1"
+        ]
+      },
+      {
+        "value": "amqp://mq.the-regex-game.com/123",
+        "match": ["amqp", "", "", "mq.the-regex-game.com", "", "123"]
+      },
+      {
+        "value": "amqp://user@localhost:5672",
+        "match": ["amqp", "user", "", "localhost", "5672"]
+      },
+      {
+        "value": "amqp://user@localhost",
+        "match": ["amqp", "user", "", "localhost"]
+      },
+      {
+        "value": "amqp://default:default@127.0.0.1/hello?option1=1&option2=2",
+        "match": [
+          "amqp",
+          "default",
+          "default",
+          "127.0.0.1",
+          "",
+          "hello",
+          "option1=1&option2=2"
+        ]
+      }
+    ],
+    "shouldNotMatch": [
+      {
+        "value": "redis://user:password@mq.the-regex-game.com:5672/myvhost?option=1",
+        "hint": "Should only allow 'amqp' scheme"
+      },
+      {
+        "value": "redis://:password@localhost",
+        "hint": "Should not only have a password"
+      },
+      {
+        "value": "redis://user:password@localhost:nop",
+        "hint": "Should not have letters in the port"
+      },
+      {
+        "value": "redis://user:password@localhost:/vhost",
+        "hint": "Should always have a port if there is ':'"
+      }
+    ]
+  }
+}

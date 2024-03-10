@@ -1,0 +1,53 @@
+{
+  "$schema": "./schema.json",
+  "name": "IPV4",
+  "description": "Write a Regex that matches an IP address. In this easy version, you do not have capture the segments nor care about the range.",
+  "difficulty": 1,
+  "category": "Web",
+  "tests": {
+    "shouldMatch": [
+      {
+        "value": "127.0.0.1",
+        "match": []
+      },
+      {
+        "value": "10.1.0.1",
+        "match": []
+      },
+      {
+        "value": "192.168.35.155",
+        "match": []
+      },
+      {
+        "value": "0.0.0.0",
+        "match": []
+      }
+    ],
+    "shouldNotMatch": [
+      {
+        "value": "192.168.155"
+      },
+      {
+        "value": "192.35.155.12."
+      },
+      {
+        "value": "1.1.155."
+      },
+      {
+        "value": "1921.155.58.12"
+      },
+      {
+        "value": "192.1551.878.12"
+      },
+      {
+        "value": "192.155.5878.12"
+      },
+      {
+        "value": "192.15.78.1211"
+      },
+      {
+        "value": "192155587812"
+      }
+    ]
+  }
+}
