@@ -22,6 +22,10 @@
       {
         "value": "reply12@hellthread.net",
         "match": ["reply12", "hellthread.net"]
+      },
+      {
+        "value": "this_does@not.work",
+        "match": ["this_does", "not.work"]
       }
     ],
     "shouldNotMatch": [
@@ -33,9 +37,6 @@
       },
       {
         "value": "please@val_id.nop"
-      },
-      {
-        "value": "this_does@not.work"
       },
       {
         "value": "idonthave@tld"

@@ -27,14 +27,6 @@
         "match": []
       },
       {
-        "value": "127.0.0.1",
-        "match": []
-      },
-      {
-        "value": "10.1.0.13:3000",
-        "match": []
-      },
-      {
         "value": "localhost",
         "match": []
       },

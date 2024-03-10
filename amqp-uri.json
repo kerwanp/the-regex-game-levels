@@ -49,16 +49,20 @@
         "hint": "Should only allow 'amqp' scheme"
       },
       {
-        "value": "redis://:password@localhost",
+        "value": "amqp://:password@localhost",
         "hint": "Should not only have a password"
       },
       {
-        "value": "redis://user:password@localhost:nop",
+        "value": "amqp://user:password@localhost:nop",
         "hint": "Should not have letters in the port"
       },
       {
-        "value": "redis://user:password@localhost:/vhost",
+        "value": "amqp://user:password@localhost:/vhost",
         "hint": "Should always have a port if there is ':'"
+      },
+      {
+        "value": "amqp://@localhost",
+        "hint": "Should not contain '@' when there is only the host"
       }
     ]
   }
