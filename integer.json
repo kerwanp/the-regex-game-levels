@@ -1,0 +1,58 @@
+{
+  "$schema": "./schema.json",
+  "name": "Simple Number",
+  "difficulty": 1,
+  "description": "Write a Regex that can match a positive or negative number.",
+  "category": "Data",
+  "tests": {
+    "shouldMatch": [
+      {
+        "value": "1",
+        "match": []
+      },
+      {
+        "value": "0",
+        "match": []
+      },
+      {
+        "value": "50540",
+        "match": []
+      },
+      {
+        "value": "5980522015487",
+        "match": []
+      },
+      {
+        "value": "-10",
+        "match": []
+      },
+      {
+        "value": "-9874",
+        "match": []
+      }
+    ],
+    "shouldNotMatch": [
+      {
+        "value": "05"
+      },
+      {
+        "value": "-0548"
+      },
+      {
+        "value": "ab21"
+      },
+      {
+        "value": "000"
+      },
+      {
+        "value": "048-7004"
+      },
+      {
+        "value": "0487004-"
+      },
+      {
+        "value": "--0487004"
+      }
+    ]
+  }
+}

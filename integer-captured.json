@@ -1,0 +1,61 @@
+{
+  "$schema": "./schema.json",
+  "name": "Catpured Number",
+  "difficulty": 3,
+  "description": "Write a Regex that can capture a positive or negative number with leading zeros.",
+  "category": "Data",
+  "tests": {
+    "shouldMatch": [
+      {
+        "value": "1",
+        "match": ["1"]
+      },
+      {
+        "value": "0",
+        "match": ["0"]
+      },
+      {
+        "value": "50540",
+        "match": ["50540"]
+      },
+      {
+        "value": "5980522015487",
+        "match": ["5980522015487"]
+      },
+      {
+        "value": "-10",
+        "match": ["-10"]
+      },
+      {
+        "value": "-9874",
+        "match": ["-9874"]
+      },
+      {
+        "value": "05",
+        "match": ["5"]
+      },
+      {
+        "value": "-0548",
+        "match": ["-548"]
+      },
+      {
+        "value": "000",
+        "match": ["0"]
+      }
+    ],
+    "shouldNotMatch": [
+      {
+        "value": "ab21"
+      },
+      {
+        "value": "048-7004"
+      },
+      {
+        "value": "0487004-"
+      },
+      {
+        "value": "--0487004"
+      }
+    ]
+  }
+}

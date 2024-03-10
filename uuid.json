@@ -1,49 +1,46 @@
 {
   "$schema": "./schema.json",
-  "id": "ulid",
-  "name": "ULID",
-  "description": "The ULID, which stands for Universally unique Lexicographically sortable IDentifier, is an alternative to the UUID.",
+  "id": "uuid",
+  "name": "UUID",
+  "description": "A Universally Unique Identifier (UUID) is a 128-bit label used for information in computer systems.",
   "category": "IDs",
-  "difficulty": 3,
+  "difficulty": 2,
   "tests": {
     "shouldMatch": [
       {
-        "value": "01HRJ8WJKN68TNXQ2FVNMAR4YR",
+        "value": "bd7611d7-7b0e-4d62-be23-aef8f2e16b22",
         "match": []
       },
       {
-        "value": "01HRJDMZS27EWANFCAB3M1D2E3",
+        "value": "530de938-6Dbe-466b-9B77-689e2c313257",
         "match": []
       },
       {
-        "value": "25hrjdq1k2rp820egp1n7v5eg1",
+        "value": "349498C0-28DE-4F3D-AE4A-A5852D410FFA",
         "match": []
       }
     ],
     "shouldNotMatch": [
       {
-        "value": "bd7611d7-7b0e-4d62-be23-aef8f2e16b224"
+        "value": "c1f5165e-41b3-82875-d7da09d79849"
       },
       {
-        "value": "81HRJDSFY233YBJSGJQM078JHD"
+        "value": "db12c61z-872b-446e-b60a-7bd68411672b"
       },
       {
-        "value": "29HRJDTQ85VWSS5AN1BWFD0RB3"
+        "value": "8977233a-j433-4c51-92cc-4e187ca1b801"
       },
       {
-        "value": "29HRJDTL85VWSS5AN1BWFD0RB3"
+        "value": "7901d0c4-dbc5-4b2o-b2d6-2af0dadb88e4"
       },
       {
-        "value": "01HRJDYVHDJ68NTF0T00RUZMY7"
+        "value": "792885d1-ce13-4967-Pj73-58b5e48"
       },
       {
-        "value": "29hrjdtl85owss5an1bwfd0rb3"
+        "value": "aacbf822-605e-4d2f-961c-ed826fccoK45"
       },
       {
-        "value": "01HRJDXJB1QR8BQD5QDB1083EE"
-      },
-      {
-        "value": "01HRJDXX7TX77FXZ7WTY75XP0D5X"
+        "value": "241efd1abe6c4f50ab581487a6543ddd"
       }
     ]
   }
