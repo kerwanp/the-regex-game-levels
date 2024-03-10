@@ -2,7 +2,7 @@
   "$schema": "./schema.json",
   "name": "IPV4",
   "description": "Write a Regex that matches an IPV4 address. You must capture the segments and make sure that the range is correct.",
-  "difficulty": 2,
+  "difficulty": 3,
   "category": "Web",
   "tests": {
     "shouldMatch": [
