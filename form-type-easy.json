@@ -1,0 +1,58 @@
+{
+  "$schema": "./schema.json",
+  "name": "Form type - Easy",
+  "description": "Form types is how <a href='https://www.sec.gov/forms'>the U.S. SECURITIES AND EXCHANGE COMMISSION</a> label company filing, often the first task of web scraping in natural language processing.",
+  "difficulty": 2,
+  "category": "Web",
+  "tests": {
+    "shouldMatch": [
+      {
+        "value": "1-A",
+        "match": [
+          "1-A"
+        ]
+      },
+      {
+        "value": "1-N",
+        "match": [
+          "1-N"
+        ]
+      },
+      {
+        "value": "11-K",
+        "match": [
+          "11-K"
+        ]
+      },
+      {
+        "value": "12b-25",
+        "match": [
+          "12b-25"
+        ]
+      },
+      {
+        "value": "19b-4(e)",
+        "match": [
+          "19b-4(e)"
+        ]
+      }
+    ],
+    "shouldNotMatch": [
+      {
+        "value": "ABS-15G"
+      },
+      {
+        "value": "ABS D-15E"
+      },
+      {
+        "value": "MA-NR"
+      },
+      {
+        "value": "11MA-41K"
+      },
+      {
+        "value": "LK3-EQ8"
+      }
+    ]
+  }
+}
